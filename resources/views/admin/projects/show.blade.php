@@ -13,5 +13,12 @@
         @endif
         <p>{{ $project->description }}</p>
         <span>{{ $project->created_at }}</span>
+        <br>
+        @if ($project->type != null)
+            <span>Type: {{ $project->type->name }}</span>
+        @else
+            <span>No type selected</span>
+        @endif
+
     </div>
 @endsection
